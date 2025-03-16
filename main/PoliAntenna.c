@@ -4,7 +4,9 @@
 #include <bmi08_wrapper.h>
 #include <mmc59830ma.h>
 
+#ifndef TAG
 #define TAG "MAIN"
+#endif
 #define ACC_TAG "ACC"
 #define GYRO_TAG "GYRO"
 
@@ -30,9 +32,6 @@ void app_main(void)
         ESP_LOGE(TAG, "MAG reset failed");
         return;
     }
-    float geo_dir;
-    orientation_t orientation;
-    mag_data_s mag_data;
 
     while(1) 
     {

@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <driver/i2c.h>
 #include "esp_log.h"
-#include <orientation.h>
 #include <math.h>
 #include <i2c.h>
 #include <esp_log.h>
@@ -20,7 +19,6 @@ typedef struct {
 bool mag_reset();
 bool get_mag_data(mag_data_s *data);
 
-bool compass(mag_data_s *mag_data, orientation_t *imu_data, float *geo_dir);
 
 
 #endif
